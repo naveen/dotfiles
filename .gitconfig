@@ -1,0 +1,23 @@
+[user]
+	name = naveen
+	email = me...
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	s = status
+	st = status
+	last = log -1 HEAD
+	track = !git-track
+[instaweb]
+	local = true
+	httpd = apachectl -f
+	port = 4321
+[github]
+	user = naveen
+	token = e...
+[core]
+	editor = vim
+[branch]
+	autosetupmerge = true
