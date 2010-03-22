@@ -1,0 +1,3 @@
+set show-date = no
+set show-rev-graph = yes
+set commit-encoding = "UTF-8"
