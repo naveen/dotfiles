@@ -1,6 +1,6 @@
 [user]
 	name = naveen
-	email = me...
+	email = n...
 [color]
 	diff = auto
 	status = auto
@@ -21,3 +21,4 @@
 	editor = vim
 [branch]
 	autosetupmerge = true
+	autosetuprebase = always
