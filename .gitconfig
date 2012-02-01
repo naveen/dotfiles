@@ -19,6 +19,7 @@
 	token = e...
 [core]
 	editor = vim
+	excludesfile = /Users/naveen/.gitexcludes
 [branch]
 	autosetupmerge = true
 	autosetuprebase = always
