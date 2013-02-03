@@ -1,6 +1,6 @@
 [user]
 	name = naveen
-	email = n...
+	email = naveenium@gmail.com
 [color]
 	diff = auto
 	status = auto
@@ -14,9 +14,6 @@
 	local = true
 	httpd = apachectl -f
 	port = 4321
-[github]
-	user = naveen
-	token = e...
 [core]
 	editor = vim
 	excludesfile = /Users/naveen/.gitexcludes
