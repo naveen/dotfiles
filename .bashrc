@@ -46,4 +46,4 @@ function gr() { grep -nr $@ *; }
 # defaults
 EDITOR=vi;   	export EDITOR
 PAGER=less;  	export PAGER # git diff expects 'less' for best output
-
+PATH=$PATH:$HOME/bin:/usr/local/sbin
