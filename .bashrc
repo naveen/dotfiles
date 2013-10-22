@@ -2,25 +2,29 @@
 # author: naveen
 # date 20080922 (revised osx)
 # updated 20111106 (vespa)
+# updated 20130225 (tesla)
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # Using this, consecutive duplicate commands, invocations
-# of ls, executions of the mutt mail client without any
-# additional parameters, plus calls to the bg, fg and exit
+# of ls, plus calls to the bg, fg and exit
 # built-ins will not be appended to the history list. 
-HISTIGNORE="&:ls:ls *:mutt:[bf]g:exit:vi"
+HISTIGNORE="&:ls:ls *:[bf]g:exit:vi"
 export HISTIGNORE
 
 ##############################################################################
 # git
 function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ [\1$(parse_git_dirty)]/"
 } 
+
+if [ -f ~/.config/.git-completion.bash ]; then
+		. ~/.config/.git-completion.bash
+fi
 
 ##############################################################################
 # my infamous two-line ps1
@@ -47,3 +51,14 @@ function gr() { grep -nr $@ *; }
 EDITOR=vi;   	export EDITOR
 PAGER=less;  	export PAGER # git diff expects 'less' for best output
 PATH=$PATH:$HOME/bin:/usr/local/sbin
+
+##############################################################################
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+##############################################################################
+# python virtualenv
+export WORKON_HOME=$HOME/.python
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
