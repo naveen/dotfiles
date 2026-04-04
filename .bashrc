@@ -34,9 +34,9 @@ PS1='\[\033[01;37m\](\u@\h \w)$(parse_git_branch)\n$ \[\033[00m\]' # white, roun
 
 ##############################################################################
 # aliases
-alias ls='ls -FG'
-alias l='ls -aFG'
-alias ll='ls -alFG'
+alias ls='ls -FGh'
+alias l='ls -aFGh'
+alias ll='ls -alFGh'
 
 alias rm='rm -i'
 alias .='pwd'
